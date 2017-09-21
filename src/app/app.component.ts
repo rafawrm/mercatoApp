@@ -3,29 +3,78 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireAuth } from 'angularfire2/auth';
+
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { ProdutosPage } from '../pages/produtos/produtos';
+import { SigninPage } from '../pages/signin/signin';
+import { SignupPage } from '../pages/signup/signup';
+import { SobrePage } from '../pages/sobre/sobre';
+import { QRCodePage } from '../pages/qrcode/qrcode';
+import { ArearestritaPage } from '../pages/arearestrita/arearestrita';
+import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
+import { LaboratorioPage } from '../pages/laboratorio/laboratorio';
 
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class MercatoApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, afAuth: AngularFireAuth) {
     this.initializeApp();
-
+    //se autenticado executa acoes abaixo
+    //afAuth.authState.subscribe(user => {
+      //if (user) {
+       // this.rootPage = ProdutosPage;
+      //} else {
+        //this.rootPage = SigninPage;
+      }
+    
+   // }
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
+    //this.pages = [
+      //{ title: 'Home', component: HomePage, icon: "home"},
+     // { title: 'Produtos', component: ProdutosPage, icon: "basket"},
+     // { title: 'Laboratório', component: LaboratorioPage, icon: "flask" }
 
+   // ];
+
+  //)};
+
+  goToQRCode(params){
+    if (!params) params = {};
+    this.nav.setRoot(QRCodePage);
   }
+  goToLaboratorio(params){
+    if (!params) params = {};
+    this.nav.setRoot(LaboratorioPage);
+  }
+  goToProdutos(params){
+    if (!params) params = {};
+    this.nav.setRoot(ProdutosPage);
+  }
+  goToHome(params){
+    if (!params) params = {};
+    this.nav.setRoot(HomePage);
+  }
+  goToSignup(params){
+    if (!params) params = {};
+    this.nav.setRoot(SignupPage);
+  }goToSignin(params){
+    if (!params) params = {};
+    this.nav.setRoot(SigninPage);
+  }goToConfiguracao(params){
+    if (!params) params = {};
+    this.nav.setRoot(ConfiguracaoPage);
+  }goToSobre(params){
+    if (!params) params = {};
+    this.nav.setRoot(SobrePage);
+    }
 
   initializeApp() {
     this.platform.ready().then(() => {

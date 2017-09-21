@@ -1,0 +1,94 @@
+{
+    "items": [
+        {
+            "name": "Produtos1",
+            "children": [
+                {
+                    "name": "Nome Produto",
+                    "information": "Informacao sobre o produto",
+                    "price": "R$10.00"
+                },
+                {
+                    "name": "Nome Produto",
+                    "information": "Informacao sobre o produto",
+                    "price": "R$10.00"
+                }
+            ]
+        },
+        {
+            "name": "Produtos2",
+            "children": [
+                {
+                    "name": "SubProduto2",
+                    "children": [
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        },
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        }
+                    ]
+                },
+                {
+                    "name": "Subproduto2.1",
+                    "children": [
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        },
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        },
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        },
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        }
+                    ]
+                },
+                {
+                    "name": "SubProduto2.2",
+                    "children": [
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        },
+                        {
+                            "name": "Nome Produto",
+                            "information": "Informacao sobre o produto",
+                            "price": "R$10.00"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Produtos3",
+            "children": [
+                {
+                    "name": "Nome Produto",
+                    "information": "Informacao sobre o produto",
+                    "price": "R$10.00"
+                },
+                {
+                    "name": "Nome Produto",
+                    "information": "Informacao sobre o produto",
+                    "price": "R$10.00"
+                }
+            ]
+        }
+    ]
+}
