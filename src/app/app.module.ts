@@ -7,6 +7,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { AuthService } from '../providers/auth/auth-service';
 
+import { ModalPage } from '../pages/modal/modal';
 import { MercatoApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProdutosPage } from '../pages/produtos/produtos';
@@ -49,6 +50,7 @@ const firebaseConfig = {
     SigninPage,
     SignupPage,
     SobrePage,
+    ModalPage,
     QRCodePage,
     ConfiguracaoPage,
     LaboratorioPage,
@@ -71,6 +73,7 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MercatoApp,
+    ModalPage,
     HomePage,
     ProdutosPage,
     SigninPage,

@@ -6,12 +6,12 @@
                 {
                     "name": "Nome Produto",
                     "information": "Informacao sobre o produto",
-                    "price": "R$10.00"
+                    "price": "Detalhes"
                 },
                 {
                     "name": "Nome Produto",
                     "information": "Informacao sobre o produto",
-                    "price": "R$10.00"
+                    "price": "Detalhes"
                 }
             ]
         },
@@ -24,12 +24,12 @@
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         },
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         }
                     ]
                 },
@@ -39,22 +39,22 @@
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         },
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         },
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         },
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         }
                     ]
                 },
@@ -64,12 +64,12 @@
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         },
                         {
                             "name": "Nome Produto",
                             "information": "Informacao sobre o produto",
-                            "price": "R$10.00"
+                            "price": "Detalhes"
                         }
                     ]
                 }
@@ -81,12 +81,12 @@
                 {
                     "name": "Nome Produto",
                     "information": "Informacao sobre o produto",
-                    "price": "R$10.00"
+                    "price": "Detalhes"
                 },
                 {
                     "name": "Nome Produto",
                     "information": "Informacao sobre o produto",
-                    "price": "R$10.00"
+                    "price": "Detalhes"
                 }
             ]
         }

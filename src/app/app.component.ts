@@ -11,7 +11,6 @@ import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { SobrePage } from '../pages/sobre/sobre';
 import { QRCodePage } from '../pages/qrcode/qrcode';
-import { ArearestritaPage } from '../pages/arearestrita/arearestrita';
 import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
 import { LaboratorioPage } from '../pages/laboratorio/laboratorio';
 
