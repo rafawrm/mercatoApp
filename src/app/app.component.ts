@@ -8,11 +8,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { HomePage } from '../pages/home/home';
 import { ProdutosPage } from '../pages/produtos/produtos';
 import { SigninPage } from '../pages/signin/signin';
-import { SignupPage } from '../pages/signup/signup';
 import { SobrePage } from '../pages/sobre/sobre';
 import { QRCodePage } from '../pages/qrcode/qrcode';
 import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
 import { LaboratorioPage } from '../pages/laboratorio/laboratorio';
+import { ArearestritaPage } from '../pages/arearestrita/arearestrita';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +24,7 @@ export class MercatoApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, afAuth: AngularFireAuth) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public afAuth: AngularFireAuth) {
     this.initializeApp();
     //se autenticado executa acoes abaixo
     //afAuth.authState.subscribe(user => {
@@ -61,13 +61,14 @@ export class MercatoApp {
     if (!params) params = {};
     this.nav.setRoot(HomePage);
   }
-  goToSignup(params){
-    if (!params) params = {};
-    this.nav.setRoot(SignupPage);
-  }goToSignin(params){
-    if (!params) params = {};
-    this.nav.setRoot(SigninPage);
-  }goToConfiguracao(params){
+  goToSignin(){
+    if (this.afAuth.auth.currentUser == null) {
+      this.nav.push(SigninPage);
+    } else {
+      this.nav.push(ArearestritaPage);
+    }
+  }
+  goToConfiguracao(params){
     if (!params) params = {};
     this.nav.setRoot(ConfiguracaoPage);
   }goToSobre(params){

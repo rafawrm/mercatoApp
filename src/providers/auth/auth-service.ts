@@ -3,7 +3,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from './user';
 import * as firebase from 'firebase/app';
 import { GooglePlus } from '@ionic-native/google-plus';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { Facebook } from '@ionic-native/facebook';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
 
 @Injectable()
@@ -54,7 +54,12 @@ export class AuthService {
       });
   }
 
-  signOut() : firebase.Promise<any> {
+  signOut(): firebase.Promise<void> {
+    firebase.auth().signOut();
+    return this.signOutFirebase();
+  }
+
+  signOut1() : firebase.Promise<any> {
     if (this.angularFireAuth.auth.currentUser.providerData.length) {
       for (var i = 0; i < this.angularFireAuth.auth.currentUser.providerData.length; i++) {
         var provider = this.angularFireAuth.auth.currentUser.providerData[i];
@@ -84,6 +89,8 @@ export class AuthService {
 
   private signOutFirebase() {
     return this.angularFireAuth.auth.signOut();
+    
+
   }
 
   resetPassword(email: string) {
