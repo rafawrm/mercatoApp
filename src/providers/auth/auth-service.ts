@@ -9,7 +9,7 @@ import { TwitterConnect } from '@ionic-native/twitter-connect';
 @Injectable()
 export class AuthService {
 
-  constructor(private angularFireAuth: AngularFireAuth, private googlePlus: GooglePlus, private facebook: Facebook, private twitter: TwitterConnect) { }
+  constructor(public angularFireAuth: AngularFireAuth, private googlePlus: GooglePlus, public facebook: Facebook, private twitter: TwitterConnect) { }
 
   createUser(user: User) {
     return this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
@@ -33,13 +33,18 @@ export class AuthService {
       });
   }
 
-  signInWithFacebook() {
-    return this.facebook.login(['public_profile', 'email'])
-      .then((res: FacebookLoginResponse) => {
-        //https://developers.facebook.com/docs/graph-api/reference/user
-        //Ao logar com o facebook o profile do usuario é automaticamente atualizado.
-        return this.angularFireAuth.auth.signInWithCredential(firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken));
-      });
+  facebookLogin(): Promise<any> {
+    return this.facebook.login(['email'])
+      .then( (response) => {
+        const facebookCredential = firebase.auth.FacebookAuthProvider
+          .credential(response.authResponse.accessToken);
+
+        this.angularFireAuth.auth.signInWithCredential(facebookCredential)
+        .then((success) => { console.log("Firebase success: " + JSON.stringify(success)); })
+        .catch((error) => { console.log("Firebase failure: " + JSON.stringify(error)); });
+
+      })
+      .catch((error) => { console.log(error) });
   }
 
   signInWithTwitter() {

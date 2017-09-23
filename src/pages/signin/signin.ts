@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController, NavParams } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { User } from '../../providers/auth/user';
 import { AuthService } from '../../providers/auth/auth-service';
 import { HomePage } from '../home/home';
+import { ArearestritaPage } from '../arearestrita/arearestrita';
 import { SignupPage } from '../signup/signup';
 import { SigninWithEmailPage } from '../signinwithemail/signinwithemail';
 
@@ -41,15 +42,15 @@ export class SigninPage {
       });
   }
 
-  signInWithFacebook() {
-    this.authService.signInWithFacebook()
-      .then(() => {
-        this.navCtrl.setRoot(HomePage);
-      })
-      .catch((error) => {
-        this.toastCtrl.create({ duration: 3000, position: 'bottom', message: 'Erro ao efetuar o login' })
-          .present();
-      });
+  signInWithFacebook(): void {
+    this.authService.facebookLogin()
+    .then(() => {
+      this.navCtrl.setRoot(ArearestritaPage);
+    })
+    .catch((error) => {
+      this.toastCtrl.create({ duration: 3000, position: 'bottom', message: 'Erro ao efetuar o login' })
+        .present();
+    });
   }
 
   signInWithTwitter() {
