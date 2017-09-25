@@ -37,7 +37,7 @@
         "cordova-plugin-facebook4": "^1.9.1",
         "cordova-plugin-googleplus": "^5.1.1",
         "cordova-plugin-splashscreen": "^4.0.3",
-        "cordova-plugin-statusbar": "^2.2.2",
+        "cordova-plugin-statusbar": "^2.2.3",
         "cordova-plugin-whitelist": "^1.3.1",
         "firebase": "^4.3.1",
         "ionic-angular": "3.6.1",
@@ -60,7 +60,6 @@
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
-            "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "phonegap-plugin-barcodescanner": {
@@ -72,7 +71,8 @@
             "cordova-plugin-facebook4": {
                 "APP_ID": "139918699956230",
                 "APP_NAME": "Mercato App"
-            }
+            },
+            "cordova-plugin-statusbar": {}
         },
         "platforms": [
             "android",
