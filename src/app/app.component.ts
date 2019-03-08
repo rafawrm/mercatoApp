@@ -74,7 +74,9 @@ export class MercatoApp {
   }goToSobre(params){
     if (!params) params = {};
     this.nav.setRoot(SobrePage);
-    }
+    }goToFacebook(){
+      window.open("fb://page/"+350241491697370, '_system', 'location=no')
+      }
 
   initializeApp() {
     this.platform.ready().then(() => {

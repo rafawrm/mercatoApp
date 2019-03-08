@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SobrePage } from '../sobre/sobre';
+import { DistribuicaoPage } from '../distribuicao/distribuicao';
 
 @Component({
   selector: 'page-produtos',
@@ -17,6 +18,9 @@ export class ProdutosPage {
   }goToHome(params){
     if (!params) params = {};
     this.navCtrl.push(HomePage);
+  }goToDistribuicao(params){
+    if (!params) params = {};
+    this.navCtrl.push(DistribuicaoPage);
   }
   
 }

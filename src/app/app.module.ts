@@ -7,6 +7,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { AuthService } from '../providers/auth/auth-service';
 
+
 import { ModalPage } from '../pages/modal/modal';
 import { MercatoApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -25,12 +26,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { SigninWithEmailPage } from '../pages/signinwithemail/signinwithemail';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
-import { ContactService } from '../providers/contact-service/contact-service';
+//import { ContactService } from '../providers/contact-service/contact-service';
 import { HttpModule } from '@angular/http';
+import { DistribuicaoPage } from '../pages/distribuicao/distribuicao';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
 const firebaseConfig = {
@@ -57,6 +60,7 @@ const firebaseConfig = {
     SigninPage,
     SigninWithEmailPage,
     SignupPage,
+    DistribuicaoPage,
     ArearestritaPage,
     ResetpasswordPage
 
@@ -82,6 +86,7 @@ const firebaseConfig = {
     QRCodePage,
     ConfiguracaoPage,
     LaboratorioPage,
+    DistribuicaoPage,
     SigninPage,
     SigninWithEmailPage,
     SignupPage,
@@ -94,9 +99,10 @@ const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     AuthServiceProvider,
-    ContactService,
+    //ContactService,
     GooglePlus,
     Facebook,
+    InAppBrowser,
     TwitterConnect,
     AuthService
   ]
